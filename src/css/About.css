@@ -1,0 +1,47 @@
+.about-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-section {
+    margin-bottom: 32px;
+}
+
+.about-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #e50914;
+    margin-bottom: 7px;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: inherit;
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+
+.about-link,
+.contact-link {
+    color: #646cff;
+    text-decoration: underline;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.github-logo {
+    width: 35px;
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+    margin-left: 10px;
+}
+
+.github-logo:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,142 @@
+.movie-details-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .movie-details {
+        flex-direction: row;
+    }
+}
+
+.poster-container {
+    position: relative;
+    max-width: 300px;
+}
+
+.details-poster {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details-info {
+    flex: 1;
+    padding-left: 0;
+}
+
+@media (min-width: 768px) {
+    .details-info {
+        padding-left: 32px;
+    }
+}
+
+.details-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #646cff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.details-year {
+    font-weight: 400;
+    color: #999;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.imdb-logo {
+    width: 40px;
+    height: auto;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.details-info p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #bbb8b8;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #e50914;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.back-button:hover {
+    background-color: #f40612;
+}
+
+.back-icon {
+    font-size: 1rem;
+}
+
+.movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.8));
+    opacity: 1;
+    transition: opacity 0.2s;
+    display: flex;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    pointer-events: auto;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.favorite-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.favorite-btn.active {
+    color: #ff4757;
+}
