@@ -4,22 +4,24 @@ import Favorites from './pages/Favorites'
 import MovieDetails from './pages/MovieDetails'
 import About from './pages/About'
 import NavBar from './components/NavBar'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import { MovieProvider } from './contexts/MovieContext'
 
 function App() {
   return (
-    <MovieProvider>
-      <NavBar />
-      <main className='main-content'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/favorites' element={<Favorites />} />
-          <Route path='/movies/:movieId' element={<MovieDetails />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </main>
-    </MovieProvider>
+    <BrowserRouter basename="/react-movies-app">
+      <MovieProvider>
+        <NavBar />
+        <main className='main-content'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/favorites' element={<Favorites />} />
+            <Route path='/movies/:movieId' element={<MovieDetails />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </main>
+      </MovieProvider>
+    </BrowserRouter>
   )
 }
 
